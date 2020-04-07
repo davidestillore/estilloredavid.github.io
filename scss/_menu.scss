@@ -1,0 +1,38 @@
+// Menu Button
+
+.menu-btn {
+    position: absolute;
+    z-index: 3; //So its very close to the front
+    right: 35px;
+    top: 35px;
+    cursor: pointer;
+    @include easeOut;
+
+    .btn-line {
+        width: 28px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background: #fff;
+        @include easeOut;
+    }
+
+    //Rotate into X With Menu Lines
+    &.close {
+        transform: rotate(180deg);      //Rotation animation in Menu Button
+
+        .btn-line {
+            //Line 1 - Rotate
+            &:nth-child(1){
+                transform: rotate(45deg) translate(5px, 5px); // first line will reposition itself diagonally
+            }
+            // Line 2 - Hide
+            &:nth-child(2){
+                opacity: 0; //Second line will disappear
+            }
+            // Line 3 - Rotate
+            &:nth-child(3){
+                transform: rotate(-45deg) translate(7px, -6px); // Third line will reposition itself diagonally
+            }
+        }
+    }
+}
