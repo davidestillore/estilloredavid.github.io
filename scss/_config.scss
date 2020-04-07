@@ -1,8 +1,8 @@
 $primary-color: #444;
 $secondary-color: #eece1a;
 $show-home-image: true;
-$home-image: url(../img/background.jpg) ; // Wrong shortcut format of vscode??
-$portrait-image: url(../img/crop-portrait.jpg) ;
+$home-image: url(../img/background.jpg); // Wrong shortcut format of vscode??
+$portrait-image: url(../img/crop-portrait.jpg);
 $background-opacity: 0.5;
 
 @mixin easeOut {
@@ -14,14 +14,14 @@ $background-opacity: 0.5;
     &#bg-img {
       background: $home-image;
       background-attachment: fixed;
-      background-size: cover; 
+      background-size: cover;
       &:after {
-        content: ''; //a fake element na wala talaga sa html, pero para i-treat nya as element and may malagyan siya ng overlay.
+        content: ""; //a fake element na wala talaga sa html, pero para i-treat nya as element and may malagyan siya ng overlay.
         position: absolute;
-        top:0;
-        right:0;  
-        width:100%;
-        height:100%;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
         z-index: -1; //This pushes the overlay one layer back. 1 layer away from you.
         background: rgba($primary-color, $background-opacity);
       }
@@ -30,37 +30,35 @@ $background-opacity: 0.5;
 }
 
 // Set Text Color
-@function set-text-color ($color){
-  @if (lightness($color)>40){
+@function set-text-color($color) {
+  @if (lightness($color) >40) {
     @return #000;
   } @else {
     @return #fff;
   }
 }
 
-
 //Media  Query Mixins for Mobile compatibility
 @mixin mediaSm {
-  @media screen and (max-width:500px){
+  @media screen and (max-width: 500px) {
     @content;
   }
 }
 
 @mixin mediaMd {
-  @media screen and (max-width:768px){
+  @media screen and (max-width: 768px) {
     @content;
   }
 }
 
 @mixin mediaLg {
-  @media screen and (min-width: 769px) and (max-width:1170px){
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
     @content;
   }
 }
 
 @mixin mediaXL {
-  @media screen and (min-width:1171px){
+  @media screen and (min-width: 1171px) {
     @content;
   }
 }
-
