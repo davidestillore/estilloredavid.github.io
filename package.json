@@ -1,0 +1,14 @@
+{
+  "name": "myportfolio",
+  "version": "1.0.0",
+  "description": "David Estillore Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "David Estillore",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
