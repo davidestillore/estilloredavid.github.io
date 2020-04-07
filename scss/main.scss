@@ -1,5 +1,6 @@
 @import 'config';
 @import 'menu';
+@import 'mobile';
 
 * {
   box-sizing: border-box; //if we have padding on the inside, it's not gonna affect the width or height of it. It's just gonna be within the box model
